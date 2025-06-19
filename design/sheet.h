@@ -4,6 +4,7 @@
 #include "common.h"
 
 #include <functional>
+#include <vector>
 
 class Sheet : public SheetInterface {
 public:
@@ -29,6 +30,6 @@ private:
     void PrintCells(std::ostream& output,
                     const std::function<void(const CellInterface&)>& printCell) const;
     Size GetActualSize() const;
-
+    // Таблица
     std::vector<std::vector<std::unique_ptr<Cell>>> cells_;
 };
